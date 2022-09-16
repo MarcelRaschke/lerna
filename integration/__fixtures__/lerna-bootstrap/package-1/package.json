@@ -11,7 +11,7 @@
     "test": "echo package-1"
   },
   "dependencies": {
-    "pify": "^2.0.0"
+    "pify": "^6.0.0"
   },
   "optionalDependencies": {
     "tiny-tarball": "^1.0.0"

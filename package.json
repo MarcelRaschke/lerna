@@ -13,7 +13,9 @@
     "ci:lint": "eslint . -c .eslintrc.yaml --no-eslintrc --ignore-path .gitignore",
     "lint": "eslint . -c .eslintrc.yaml --no-eslintrc --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint",
     "pretest": "npm run lint",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
     "lerna": "core/lerna/cli.js"
   },
   "dependencies": {
-    "lerna": "file:core/lerna"
+    "lerna": "file:core/lerna",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@lerna-test/calls-back": "file:helpers/calls-back",
@@ -94,5 +97,6 @@
   },
   "engines": {
     "node": ">= 6.9.0"
-  }
+  },
+  "snyk": true
 }

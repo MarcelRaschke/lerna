@@ -3,5 +3,13 @@
   "devDependencies": {
     "external": "^1.0.0",
     "lerna": "500.0.0"
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
